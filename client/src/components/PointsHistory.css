@@ -1,0 +1,342 @@
+.points-history-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.points-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.points-history-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.back-button {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #e0e0e0;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.error-state {
+  text-align: center;
+  padding: 40px;
+  color: #ff4d4f;
+}
+
+.error-state button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.history-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.history-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.history-status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.status-completed {
+  background-color: #e6f7ff;
+  color: #1890ff;
+}
+
+.status-pending {
+  background-color: #fff7e6;
+  color: #fa8c16;
+}
+
+.history-item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.history-type {
+  font-size: 14px;
+  color: #666;
+}
+
+.history-points {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.positive {
+  color: #52c41a;
+}
+
+.negative {
+  color: #ff4d4f;
+}
+
+.history-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #999;
+}
+
+.appeal-button {
+  padding: 4px 12px;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.appeal-button:hover {
+  background-color: #3949ab;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.appeal-modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.appeal-modal h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.appeal-content {
+  margin-bottom: 24px;
+}
+
+.appeal-content p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.appeal-reason {
+  margin-top: 16px;
+}
+
+.appeal-reason label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.appeal-reason textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.appeal-reason textarea:focus {
+  outline: none;
+  border-color: #1a237e;
+  box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.2);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cancel-button {
+  background-color: #f0f0f0;
+  border: none;
+  color: #666;
+}
+
+.cancel-button:hover {
+  background-color: #e0e0e0;
+}
+
+.submit-button {
+  background-color: #1a237e;
+  border: none;
+  color: white;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #3949ab;
+}
+
+.submit-button:disabled {
+  background-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+.current-points {
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.points-label {
+  font-size: 16px;
+}
+
+.points-value {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.history-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.history-meta {
+  display: flex;
+  gap: 12px;
+  color: #666;
+  font-size: 14px;
+  align-items: center;
+}
+
+.record-type {
+  color: #1a237e;
+  font-weight: 500;
+}
+
+.points-change {
+  color: #388e3c;
+  font-weight: 500;
+}
+
+.points-change.negative {
+  color: #d32f2f;
+}
+
+.separator {
+  color: #e0e0e0;
+}
+
+.history-time {
+  color: #666;
+  font-size: 14px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1a237e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.connect-wallet-button {
+  padding: 12px 24px;
+  background: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-button:hover {
+  background: #3949ab;
+  transform: translateY(-1px);
+} 

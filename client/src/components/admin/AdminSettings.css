@@ -1,0 +1,115 @@
+.admin-settings {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.admin-settings h2 {
+  color: #1a237e;
+  margin-bottom: 2rem;
+}
+
+.admin-settings h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.add-admin-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.add-admin-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.add-admin-form input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.add-admin-form button {
+  padding: 0.75rem 1.5rem;
+  background: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-admin-form button:hover {
+  background: #3949ab;
+}
+
+.add-admin-form button:disabled {
+  background: #9fa8da;
+  cursor: not-allowed;
+}
+
+.admin-list-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.admin-address {
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+.remove-button {
+  padding: 0.5rem 1rem;
+  background: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.remove-button:hover {
+  background: #f44336;
+}
+
+.remove-button:disabled {
+  background: #ef9a9a;
+  cursor: not-allowed;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.error-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #ffebee;
+  color: #d32f2f;
+  border-radius: 4px;
+  text-align: center;
+} 

@@ -1,0 +1,211 @@
+/* AdminAppeals.css */
+
+/* 申诉列表容器 */
+.admin-appeals-page {
+  padding: 20px;
+  background-color: #f4f7f6; /* 浅灰色背景 */
+}
+
+.appeals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-controls button {
+  margin-left: 10px;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.filter-controls button.active {
+  background-color: #007bff; /* 活跃按钮背景色 */
+  color: white;
+  border-color: #007bff;
+}
+
+/* 申诉卡片样式 */
+.appeals-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 响应式网格布局 */
+  gap: 20px; /* 卡片之间的间隔 */
+}
+
+.appeal-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.appeal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px; /* 分隔线下方空间 */
+  border-bottom: 1px solid #eee; /* 添加分隔线 */
+}
+
+.appeal-id {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+}
+
+.appeal-status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.appeal-status.pending {
+  background-color: #ffc107; /* 待处理黄色 */
+  color: #343a40;
+}
+
+.appeal-status.resolved {
+  background-color: #28a745; /* 已处理绿色 */
+  color: white;
+}
+
+.appeal-info {
+  margin-bottom: 20px;
+}
+
+.info-item {
+  margin-bottom: 10px; /* 信息项之间的间隔 */
+  display: flex; /* 使 label 和 span/p 并排 */
+  align-items: baseline;
+}
+
+.info-item label {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #555;
+  min-width: 80px; /* 确保 label 宽度一致 */
+}
+
+.info-item span,
+.info-item p {
+  flex-grow: 1; /* 使内容占据剩余空间 */
+  word-break: break-word; /* 长文本换行 */
+}
+
+
+.points-change.positive {
+  color: #28a745; /* 绿色 */
+  font-weight: bold;
+}
+
+.points-change.negative {
+  color: #dc3545; /* 红色 */
+  font-weight: bold;
+}
+
+.appeal-reason {
+   background-color: #f8f9fa; /* 浅灰色背景 */
+   padding: 10px;
+   border-radius: 4px;
+   border: 1px solid #eee;
+   margin-top: 5px; /* 与 label 的间距 */
+   white-space: pre-wrap; /* 保留换行 */
+}
+
+.tx-hash {
+  font-family: monospace; /* 使用等宽字体 */
+  font-size: 0.9em;
+  color: #007bff; /* 链接颜色或强调色 */
+  word-break: break-all; /* 确保长哈希能换行 */
+}
+
+
+.appeal-actions {
+  display: flex;
+  gap: 10px; /* 按钮之间的间隔 */
+  margin-top: auto; /* 将按钮推到底部 */
+}
+
+.action-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  flex-grow: 1; /* 使按钮宽度自适应 */
+  text-align: center;
+}
+
+.approve-button {
+  background-color: #28a745; /* 通过按钮绿色 */
+  color: white;
+}
+
+.approve-button:disabled {
+  background-color: #90ee90; /* 禁用状态浅绿色 */
+  cursor: not-allowed;
+}
+
+.reject-button {
+  background-color: #dc3545; /* 拒绝按钮红色 */
+  color: white;
+}
+
+.reject-button:disabled {
+  background-color: #ffb6c1; /* 禁用状态浅红色 */
+  cursor: not-allowed;
+}
+
+
+.appeal-result {
+  margin-top: auto; /* 将结果推到底部 */
+  text-align: center;
+  font-weight: bold;
+  padding-top: 15px; /* 与上方内容的分隔线 */
+  border-top: 1px solid #eee;
+}
+
+.appeal-result .result {
+  padding: 8px 15px;
+  border-radius: 4px;
+  color: white;
+}
+
+.appeal-result .result.approved {
+  background-color: #28a745; /* 已通过绿色 */
+}
+
+.appeal-result .result.rejected {
+  background-color: #dc3545; /* 已拒绝红色 */
+}
+
+/* 空状态提示 */
+.empty-state {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+/* 加载提示 */
+.loading-spinner {
+  /* 添加加载动画样式 */
+}
+
+.error-message {
+  text-align: center;
+  color: #dc3545;
+  padding: 20px;
+}
+
+.error-message button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  cursor: pointer;
+}

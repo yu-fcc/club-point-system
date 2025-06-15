@@ -1,0 +1,23 @@
+{
+  "name": "club-points-system-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for the club points system",
+  "main": "truffle-config.js",
+  "scripts": {
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "test": "truffle test"
+  },
+  "keywords": [
+    "blockchain",
+    "solidity",
+    "ethereum",
+    "smart-contracts"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^2.1.1",
+    "truffle": "^5.7.0"
+  }
+} 
